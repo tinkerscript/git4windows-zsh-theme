@@ -1,4 +1,5 @@
 # git4windows-zsh-theme
+![git4windows zsh theme](https://tinkerscript.github.io/git4windows-zsh-theme.png)
 ## Installation
 ```bash
 mkdirp -p ~/.zsh
