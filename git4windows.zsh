@@ -10,6 +10,11 @@ git4windows_get_prompt() {
 	fi
 
 	echo -n "%F{green}%n@%m "
+
+	if [[ -n $MSYSTEM ]]; then
+		echo -n "%F{magenta}$MSYSTEM "
+	fi
+
 	echo -n "%F{yellow}%~"
 	echo -n " "
 
@@ -20,7 +25,7 @@ git4windows_get_prompt() {
 		echo -n "(${git_branch})%f"
 	fi
 
-	if [[ -v GIT4WINDOWS_THEME_SHOW_TIME ]]; then
+	if [[ -v GIT4WINDOWS_SHOW_TIME ]]; then
 		echo -n "%F{grey} [%D{%H:%M:%S}]%f"
 	fi
 
